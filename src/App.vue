@@ -1,10 +1,11 @@
+<template>
+  <router-view />
+</template>
 <script setup lang="ts">
-
 </script>
 
-<template>
-
-  <RouterView />
-</template>
-
-<style scoped></style>
+<style scoped>
+body {
+  margin: 0;
+}
+</style>

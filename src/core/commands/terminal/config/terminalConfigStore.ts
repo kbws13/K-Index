@@ -4,7 +4,7 @@ export const useTerminalConfigStore = defineStore('terminalConfig', {
   state: () => ({
     background: 'black',
     showHint: true,
-    welcomeText: [] as string[],
+    welcomeTexts: [] as string[],
   }),
   getters: {},
   persist: {
@@ -39,8 +39,8 @@ export const useTerminalConfigStore = defineStore('terminalConfig', {
       }
       return this.showHint
     },
-    setWelcomeText(welcomeText: string[]) {
-      this.welcomeText = welcomeText
+    setWelcomeText(welcomeTexts: string[]) {
+      this.welcomeTexts = welcomeTexts
     },
     reset() {
       this.$reset()

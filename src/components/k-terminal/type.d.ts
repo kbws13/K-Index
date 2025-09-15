@@ -10,7 +10,7 @@ declare namespace KTerminal {
   interface OutputType {
     type: 'command' | 'text' | 'component'
     text?: string
-    resultList: OutputType[]
+    resultList?: OutputType[]
     component?: any
     status?: OutputStatusType
     props?: any
@@ -20,7 +20,7 @@ declare namespace KTerminal {
   /**
    * Command output type
    */
-  interface CommandOutputType {
+  interface CommandOutputType extends OutputType {
     type: 'command'
     text: string
     resultList: OutputType[]
@@ -29,7 +29,7 @@ declare namespace KTerminal {
   /**
    * Text output type
    */
-  interface TextOutputType {
+  interface TextOutputType extends OutputType {
     type: 'text'
     text: string
   }
@@ -37,7 +37,7 @@ declare namespace KTerminal {
   /**
    * Component output type
    */
-  interface ComponentOutputType {
+  interface ComponentOutputType extends OutputType {
     type: 'component'
     component: any
     props?: any
@@ -59,16 +59,16 @@ declare namespace KTerminal {
     // immediate output text
     writeTextOutput: (text: string, status?: OutputStatusType) => void
     // write command text result
-    writeTextResult: (text: string, resultList: OutputType[]) => void
+    writeTextResult: (text: string, resultList: OutputStatusType) => void
     // write command error text result
     writeTextErrorResult: (text: string) => void
     // write command success text result
     writeTextSuccessResult: (text: string) => void
     writeResult: (output: OutputType) => void
-    foucusInput: () => void
+    focusInput: () => void
     isInputFocused: () => boolean
     setTabCompletion: () => void
-    doSubmmitCommand: () => void
+    doSubmitCommand: () => void
     showNextCommand: () => void
     showPrevCommand: () => void
     listHistoryCommand: () => CommandOutputType[]

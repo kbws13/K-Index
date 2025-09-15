@@ -1,8 +1,8 @@
-import './type'
+import UserType = User.UserType
 
 /**
  * 本地用户
  */
-export const LOCAL_USER: User.UserType = {
+export const LOCAL_USER: UserType = {
   username: 'local',
 }

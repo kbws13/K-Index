@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import { LOCAL_USER } from './userConstant'
-import './type'
+import UserType = User.UserType
 
 export const useUserStore = defineStore('user', {
   state: () => ({ loginUser: { ...LOCAL_USER } }),
@@ -21,8 +21,10 @@ export const useUserStore = defineStore('user', {
     },
   },
   actions: {
-    async getAndSetLoginUser() {},
-    setLoginUser(user: User.UserType) {
+    async getAndSetLoginUser() {
+      console.log('getAndSetLoginUser')
+    },
+    setLoginUser(user: UserType) {
       this.loginUser = user
     },
   },
