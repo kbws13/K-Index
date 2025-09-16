@@ -26,5 +26,6 @@ interface CommandOptionsType {
   alias?: string[]
   desc?: string
   type: 'string' | 'boolean'
+  defaultValue?: string | boolean
   required?: boolean
 }

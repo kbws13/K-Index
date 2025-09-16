@@ -1,8 +1,8 @@
 import { useTerminalConfigStore } from '@/core/commands/terminal/config/terminalConfigStore'
 import { ref } from 'vue'
 import _, { trim } from 'lodash'
-import { commandMap } from '@/core/commands/commandRegister'
 import { getUsageStr } from '@/core/commands/terminal/help/helpUtils'
+import { commandMap } from '@/core/commandRegister'
 
 const useHint = () => {
   const hint = ref('')

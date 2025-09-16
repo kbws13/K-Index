@@ -59,7 +59,7 @@ declare namespace KTerminal {
     // immediate output text
     writeTextOutput: (text: string, status?: OutputStatusType) => void
     // write command text result
-    writeTextResult: (text: string, resultList: OutputStatusType) => void
+    writeTextResult: (text: string, status?: OutputStatusType) => void
     // write command error text result
     writeTextErrorResult: (text: string) => void
     // write command success text result

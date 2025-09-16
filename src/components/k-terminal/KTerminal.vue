@@ -51,6 +51,7 @@
 </template>
 
 <script lang="ts" setup>
+import ContentOutput from "./ContentOutput.vue"
 import { computed, onMounted, ref, toRefs, watchEffect } from "vue"
 import useHint from "./hint"
 import useHistory from "./history"

@@ -58,3 +58,12 @@ export const getOptionKey = (option: CommandOptionsType) => {
   }
   return '--' + option.key
 }
+
+export const getOptionKeyList = (option: CommandOptionsType) => {
+  const list = []
+  if (option.alias && option.alias.length > 0) {
+    list.push('-' + option.alias[0])
+  }
+  list.push('--' + option.key)
+  return list
+}
